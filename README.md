@@ -10,12 +10,14 @@
 ### Association
 - has_many :messages
 - has_many :groups, through: members
+- has_many :members
 
 ## messagesテーブル
 
 |Column|Type|Options|
 |------|----|-------|
-|text|string|null: false,|
+|text|string|null: false|
+|image|text||
 |user_id|integer|null: false, foreign_key: true|
 |group_id|integer|null: false, foreign_key: true|
 
@@ -27,11 +29,12 @@
 
 |Column|Type|Options|
 |------|----|-------|
-|title|string|null: false|
+|name|string|null: false|
 
 ### Association
 - has_many :messages
 - has_many :users, through :members
+- has_many :members
 
 ## membersテーブル
 
