@@ -16,10 +16,10 @@
 
 |Column|Type|Options|
 |------|----|-------|
-|text|string|null: false|
+|text|string||
 |image|text||
-|user_id|integer|null: false, foreign_key: true|
-|group_id|integer|null: false, foreign_key: true|
+|user_id|references|null: false, foreign_key: true|
+|group_id|references|null: false, foreign_key: true|
 
 ### Association
 - belongs_to :user
@@ -40,8 +40,8 @@
 
 |Column|Type|Options|
 |------|----|-------|
-|group_id|integer|null: false, foreign_key: true|
-|uesr_id|integer|null: false, foreign_key: true|
+|group_id|references|null: false, foreign_key: true|
+|uesr_id|references|null: false, foreign_key: true|
 
 ### Association
 - belongs_to :user
