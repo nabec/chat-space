@@ -3,9 +3,7 @@ $(function() {
 
   function buildMessage(message){
     var MessageImage = '';
-    if (message.image.url){
-      MessageImage = `<img class="message__image" src="${message.image.url}">`
-    }
+    message.image.url ? MessageImage = `<img class="message__image" src="${message.image.url}">` : html; 
     var html = `<div class="message">
                   <div class="message__upper-info">
                     <p class="message__upper-info__talker">
@@ -39,8 +37,7 @@ $(function() {
     .done(function(message){
       var html = buildMessage(message);
       $('.messages').append(html);
-      $('#message_text').val('');
-      // $('#message_image').attr('name','');
+      $('#new_message')[0].reset();
       $('.submit-btn').attr('disabled',false);
       $('.messages').animate({scrollTop: $('.messages')[0].scrollHeight});
       return false;
