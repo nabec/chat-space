@@ -6,11 +6,6 @@ div {
   margin: 0;
   padding: 0;
   display: block;
-  
-}
-
-form {
-  display: flex; 
 }
 
 .flash-box {
@@ -136,6 +131,10 @@ form {
   height: 90px;
   padding: 20px 40px;
   background-color: #ddd;
+}
+
+.new_message {
+  display: flex;
 }
 
 .input-box {

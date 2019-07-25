@@ -1,6 +1,5 @@
+$(document).on('turbolinks:load', function() {
 $(function() {
-
-
   function buildMessage(message){
     var MessageImage = '';
     message.image.url ? MessageImage = `<img class="message__image" src="${message.image.url}">` : html; 
@@ -20,7 +19,6 @@ $(function() {
                 </div>`
     return html;
   }
-
 
   $('#new_message').on('submit',function(e) {
     e.preventDefault();
@@ -47,4 +45,5 @@ $(function() {
       $('.submit-btn').attr('disabled',false)
     })
   })
+});
 });
